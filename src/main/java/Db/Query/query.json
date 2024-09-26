@@ -1,0 +1,75 @@
+[
+  {
+    "type": "select",
+    "columns": ["columnA", "columnB"],
+
+    "where": "columnB=1"
+  },
+
+  {
+    "type": "init",
+    "database": "dbname"
+  },
+
+  {
+    "type": "update",
+
+    "where": "columnB=1",
+    "values": [
+      {
+        "colName" :"columnA",
+        "value": "value1"
+      }
+    ]
+  },
+
+  {
+    "type": "insert",
+
+    "values": [
+      {
+        "colName" :"columnA",
+        "value": "fst val"
+      },
+      {
+        "colName":"columnB",
+        "value": 1
+      }
+    ]
+  },
+
+
+  {
+    "type": "create",
+    "database": "dbname",
+    "values": [
+      {
+        "colName" :"columnA",
+        "value": "string 10"
+      },
+      {
+        "colName":"columnB",
+        "value": "integer 4"
+      }
+    ]
+  },
+
+  {
+    "type": "delete",
+    "where": "columnB=1"
+  },
+
+
+  {
+    "transaction": "begin",
+    "type": "transaction"
+  },
+  {
+    "transaction": "commit",
+    "type": "transaction"
+  },
+  {
+    "transaction": "rollback",
+    "type": "transaction"
+  }
+]
